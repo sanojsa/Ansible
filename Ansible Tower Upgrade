@@ -1,0 +1,53 @@
+Ansible tower upgrade with bundle source
+----------------------------------------
+Upgrading the ansible tower from 3.4.1 to 3.7.0 (current latest Version) in rhel 7.4
+
+Pre-requistes
+-------------
+
+1) All upgrades should be no more than two major versions behind what you are currently upgrading to. 
+
+   For example, in order to upgrade to Ansible Tower 3.7.x, you must first be on version 3.6.x; i.e., there is no direct upgrade path from version 3.4.x.
+
+2) Backing up the ansible tower using the below command.
+
+   root@ansibletower:~# ./setup.sh -b
+
+3) On Red Hat Enterprise Linux 7, Ansible Tower 3.5.0 requires the Python 3 Software Collection. 
+
+4) Verify that 10GB are available in /var
+
+5) Need to subscribe below extra repos.
+
+  Extras (RHEL7) / Optional (RHEL6)
+
+ # subscription-manager repos --enable rhel-server-rhscl-7-rpms
+ # subscription-manager repos --enable rhel-7-server-extras-rpms
+
+6) Download the bundle source from Ansible link below
+
+https://releases.ansible.com/ansible-tower/setup-bundle/
+
+7) Also create a local repo for extra ansible repos inside the bundle directory
+
+# /bundle/repos/*
+
+Installation Steps
+++++++++++++++++++
+
+1) Extract the packages
+
+  # tar xvzf ansible-tower-setup-bundle-*.el7.tar.gz
+  # cd ansible-tower-setup-bundle-*.el7
+
+2) Update the inventory file with all the passwords as required
+
+  # vi inventory
+
+3) Run the setup file
+
+  # ./setup.sh
+
+3) Upgrade ansible tower version from 3.4.1 to 3.6.1 and later to 3.7.0
+
+4) Use the same procedure for upgrading to the latest version 
