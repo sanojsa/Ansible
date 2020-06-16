@@ -1,9 +1,9 @@
 Ansible tower upgrade with bundle source
-
+----------------------------------------
 Upgrading the ansible tower from 3.4.1 to 3.7.0 (current latest Version) in rhel 7.4
 
 Pre-requistes
-+++++++++++++
+-------------
 
 1) All upgrades should be no more than two major versions behind what you are currently upgrading to. 
 
@@ -48,7 +48,7 @@ Installation Steps
 
   # ./setup.sh
 
-3) Upgrading ansible tower version from 3.4.1 to 3.6.1 and later to 3.7.0
+3) Upgrade ansible tower version from 3.4.1 to 3.6.1 and later to 3.7.0
 
 4) Use the same procedure for upgrading to the latest version 
 
