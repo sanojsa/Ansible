@@ -1,3 +1,11 @@
+Steps to install ansible
+------------------------
+
+
+1) yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+2) yum install ansible
+
 Issue: 
 -----
 Cannot find a valid baseurl for repo: base/7/x86_64
