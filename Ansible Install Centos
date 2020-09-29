@@ -1,0 +1,7 @@
+Issue: 
+-----
+Cannot find a valid baseurl for repo: base/7/x86_64
+
+Solution:
+--------
+sudo yum upgrade ca-certificates --disablerepo=epel
